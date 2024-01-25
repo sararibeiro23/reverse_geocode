@@ -8,7 +8,7 @@ def read(filename):
 
 setup(
     name='reverse_geocode',
-    version='1.5.1',
+    version='1.5+sara',
     packages=['reverse_geocode'],
     package_dir={'reverse_geocode': '.'},  # look for package contents in current directory
     package_data={'reverse_geocode': ['geocode.csv', 'countries.csv']},
