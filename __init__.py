@@ -12,8 +12,8 @@ except ImportError:
 from scipy.spatial import cKDTree as KDTree
 
 # location of geocode data to download
-GEOCODE_URL = 'http://download.geonames.org/export/dump/cities5000.zip'
-GEOCODE_FILENAME = 'cities5000.txt'
+GEOCODE_URL = 'http://download.geonames.org/export/dump/cities1000.zip'
+GEOCODE_FILENAME = 'cities1000.txt'
 
 
 def singleton(cls):
