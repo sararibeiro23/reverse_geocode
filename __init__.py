@@ -71,10 +71,12 @@ class GeocodeData:
         """Extract geocode data from zip
         """
         if os.path.exists(local_filename):
+            print('local file using')
             # open compact CSV
             rows = csv.reader(open(local_filename, 'r'))
         else:
             if not os.path.exists(GEOCODE_FILENAME):
+                print('extract file')
                 # remove GEOCODE_FILENAME to get updated data
                 downloadedFile = self.__download()
                 logging.info('Extracting: {}'.format(GEOCODE_FILENAME))
