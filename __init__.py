@@ -71,12 +71,10 @@ class GeocodeData:
         """Extract geocode data from zip
         """
         if os.path.exists(local_filename):
-            print('local file using')
             # open compact CSV
             rows = csv.reader(open(local_filename, 'r'))
         else:
             if not os.path.exists(GEOCODE_FILENAME):
-                print('extract file')
                 # remove GEOCODE_FILENAME to get updated data
                 downloadedFile = self.__download()
                 logging.info('Extracting: {}'.format(GEOCODE_FILENAME))
@@ -131,5 +129,5 @@ if __name__ == '__main__':
     # test some coordinate lookups
     city1 = -37.81, 144.96
     city2 = 31.76, 35.21
-    print(get(city1))
+    #print(get(city1))
     print(search([city1, city2]))
